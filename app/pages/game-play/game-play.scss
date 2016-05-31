@@ -1,0 +1,23 @@
+.play {
+
+  .ship-x {
+    width: 7px;
+    height: 7px;
+    margin: 0 1px 0 0;
+    background: #C5C5FF;
+    display: block;
+    float: left;
+  }
+
+  .destroyed {
+    .ship-x {
+      width: 7px;
+      height: 7px;
+      margin: 0 1px 0 0;
+      background: #f53d3d;
+      display: block;
+      float: left;
+    }
+  }
+
+}

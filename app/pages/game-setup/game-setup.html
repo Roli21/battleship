@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+  <ion-title>Game Setup</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+
+  <div class="container" id="game">
+    <div class="cell" [attr.id]="'cell-'+cell" *ngFor="#cell of cells"></div>
+  </div>
+
+  <button (click)="startGame()">START GAME</button>
+
+</ion-content>

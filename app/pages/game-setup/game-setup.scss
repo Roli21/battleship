@@ -1,0 +1,22 @@
+#game, #play {
+  position: relative;
+  display: flex;                                                                                                      //defines a flex container
+  flex-wrap: wrap;                                                                                                    //allow the items to wrap - multi-line
+  .cell {
+    flex-basis: 10%;
+    border: 1px solid #B4B4FF;
+    padding: 0;
+  }
+
+  .ship {
+    position: absolute;
+    border: 2px solid #00f;
+    background: rgba(0,0,255,.05);
+    &.rotate {
+      transform: rotate(90deg);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+
