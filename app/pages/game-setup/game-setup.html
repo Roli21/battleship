@@ -8,6 +8,17 @@
     <div class="cell" [attr.id]="'cell-'+cell" *ngFor="#cell of cells"></div>
   </div>
 
-  <button (click)="startGame()">START GAME</button>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col padding text-center>
+        <button large (click)="startGame()">
+          <ion-icon name="boat"></ion-icon>
+          START GAME
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

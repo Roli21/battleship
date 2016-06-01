@@ -10,7 +10,6 @@ export class GameEnd {
 
     constructor(private params: NavParams){
         let player = params.data.player;
-        console.log(player);
         if(player === 1){
             this.player = 'PLAYER 1';
         } else {

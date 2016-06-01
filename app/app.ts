@@ -1,6 +1,7 @@
 import 'es6-shim';
 import {App, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
+import {GameStart} from './pages/game-start/game-start';
 import {GameSetup} from './pages/game-setup/game-setup';
 
 
@@ -10,7 +11,8 @@ import {GameSetup} from './pages/game-setup/game-setup';
 })
 
 export class MyApp {
-  rootPage: any = GameSetup;
+  rootPage: any = GameStart;
+  //rootPage: any = GameSetup;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

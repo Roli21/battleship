@@ -1,8 +1,8 @@
 .play {
 
   .ship-x {
-    width: 7px;
-    height: 7px;
+    width: 20px;
+    height: 20px;
     margin: 0 1px 0 0;
     background: #C5C5FF;
     display: block;
@@ -11,12 +11,7 @@
 
   .destroyed {
     .ship-x {
-      width: 7px;
-      height: 7px;
-      margin: 0 1px 0 0;
       background: #f53d3d;
-      display: block;
-      float: left;
     }
   }
 

@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page, NavController, NavParams} from 'ionic-angular';
 import {GamePlay} from '../game-play/game-play';
 import * as interact from "interact.js";
 
@@ -13,11 +13,14 @@ export class GameSetup {
     originY:number;
     cellSize:number;
     shipCount:number = 0;
+    gameModi:number;
 
-    constructor(private nav:NavController) {
+    constructor(private params: NavParams, private nav: NavController) {
         for (let i = 0; i < 100; i++) {
             this.cells.push(i);
         }
+        this.gameModi = params.data.modi;
+        console.log("GameModi: " + this.gameModi);
     }
 
     startGame() {
@@ -110,6 +113,7 @@ export class GameSetup {
         let gameSize = game.clientWidth + 'px';
         game.style.width = gameSize;
         game.style.height = gameSize;
+        console.log("gameSize: " + gameSize);
 
         this.cellSize = game.clientWidth / 10;
         this.originX = game.getClientRects()[0].left;
@@ -129,9 +133,17 @@ export class GameSetup {
             interact(element)
                 .draggable({
                     restrict: {
-                        restriction: "parent",
-                        endOnly: true,
-                        elementRect: {top: 0, left: 0, bottom: 1, right: 1}
+                        /*
+                        //restriction: 'parent',
+                        restriction: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        },
+                        */
+                        elementRect: {top: 0, left: 0, bottom: 1, right: 1},
+                        endOnly: true
                     },
                     inertia: true,
                     snap: {
@@ -146,7 +158,6 @@ export class GameSetup {
                         //relativePoints: [ { x: this.originX, y: this.originY } ]
                     },
                     onmove: (event) => {
-                        console.log('dragmove');
                         event.target.setAttribute('data-move', 'true');
                         let posTop = event.pageY - this.originY;
                         let posLeft = event.pageX - this.originX;

@@ -1,8 +1,8 @@
-#game, #play {
+#game, #play, #mymap {
   position: relative;
   display: flex;                                                                                                      //defines a flex container
   flex-wrap: wrap;                                                                                                    //allow the items to wrap - multi-line
-  .cell {
+  .cell, .myCell {
     flex-basis: 10%;
     border: 1px solid #B4B4FF;
     padding: 0;

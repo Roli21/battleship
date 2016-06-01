@@ -1,0 +1,32 @@
+<ion-navbar *navbar>
+    <ion-title>Battleship 3000</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+
+    <ion-grid class="start-buttons">
+
+        <ion-row>
+            <ion-col padding text-center>
+                <button large (click)="startSetup(1)">
+                    <ion-icon name="game-controller-b"></ion-icon>
+                    1 PLAYER
+                </button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col padding text-center>
+                <button large (click)="startSetup(2)">
+                    <ion-icon name="game-controller-b"></ion-icon>
+                    2 PLAYER
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
+
+
+</ion-content>
